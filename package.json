@@ -1,0 +1,18 @@
+{
+  "name": "maybankEcho",
+  "description": "Voice Command app with Authentication",
+  "author": "Sulaiman <sulaiman@derp.com.my",
+  "engines": {
+    "node": "5.10.0"
+  },
+  "dependencies": {
+    "async": "^2.0.1",
+    "body-parser": "^1.15.2",
+    "crypto-js": "^3.1.6",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "node-wit": "^4.1.0",
+    "request": "^2.75.0",
+    "twilio": "^2.11.0"
+  }
+}
