@@ -198,7 +198,7 @@ function authUser(phoneNumber, wavUrl, callback) {
 			case 200:
 				if (body.ResponseCode == 'SUC')
 					return callback(null, true);
-				else if (body.Result.indexOf('Not confident'))
+				else if (body.Result.indexOf('Not confident') >= 0)
 					return callback(null, false);
 				return callback(body.Result);
 			case 412:
