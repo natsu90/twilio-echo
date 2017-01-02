@@ -1,7 +1,7 @@
 {
   "name": "maybankEcho",
   "description": "Voice Command app with Authentication",
-  "author": "Sulaiman <sulaiman@derp.com.my",
+  "author": "Sulaiman <sulaiman@derp.com.my>",
   "engines": {
     "node": "5.10.0"
   },
