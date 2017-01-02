@@ -10,7 +10,7 @@ var headers = {
     'PlatformID'      : '23'
 }
 
-function voiceIt() {
+function Voiceit() {
 
 	return {
 		userRequest: function(req, res, next) {
@@ -209,5 +209,5 @@ function authUser(phoneNumber, wavUrl, callback) {
 	});
 }
 
-module.exports = voiceIt;
+module.exports = Voiceit;
 

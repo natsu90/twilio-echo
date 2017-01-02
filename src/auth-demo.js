@@ -1,4 +1,11 @@
 
+/*
+ * Modified from
+ * https://github.com/choppen5/twilioVoiceItiVR
+ */
+
+require('dotenv').config();
+
 var twilio     = require('twilio'),
     bodyParser = require('body-parser'),
     express    = require('express'),
@@ -17,7 +24,7 @@ app.post('/incoming_call', voiceit.userRequest, function(req, res) {
 
 	var twiml = new twilio.TwimlResponse();
 
-	twiml.say('Welcome to Maybank Echo.');
+	twiml.say('Welcome to Twilio Echo.');
 
 	async.waterfall([
 		function(callback) {
@@ -119,7 +126,7 @@ app.post('/process_authentication', voiceit.userRequest, function(req, res) {
 		} else {
 			if (success)
 				twiml.say('Authentication is successful')
-					.redirect('/start_action');
+					.redirect('/start_chat');
 			else
 				twiml.say('Passphrase is not clear. Please try again.')
 					.redirect('/authenticate');
@@ -129,18 +136,14 @@ app.post('/process_authentication', voiceit.userRequest, function(req, res) {
 	});
 });
 
-// Action
+// Chat
 // ------
-app.post('/start_action', (req, res) => {
+app.post('/start_chat', (req, res) => {
 
 	var twiml = new twilio.TwimlResponse();
 
-	twiml.say('How can I help you?')
-		// .record({
-		// 	action    : '/process_action',
-		// 	maxLength : 5,
-		// 	trim      : 'do-not-trim',
-		// })
+	twiml.say('Thank you for trying this demo. Good bye!')
+
 	res.send(twiml.toString());
 });
 
